@@ -1,0 +1,18 @@
+extends layout/index
+block playerslist
+  include includes/playerslist
+block content    
+  #home.container
+    .row
+      .col-sm-8
+        .maincontent
+          article.article
+            h1.article-title History
+            p
+              | The first headquarters were established at the 'Fiaschetteria Toscana' in Via Berchet in Milan, back in 1899
+          article.article
+            h1.article-title Who we are?
+            p
+              a(href='https://www.acmilan.com') #weareacmilan          
+
+      include includes/sidebar
