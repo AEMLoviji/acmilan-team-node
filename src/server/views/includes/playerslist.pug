@@ -1,0 +1,9 @@
+article.playerslist.jumbotron.hidden-xs
+  .container
+    .row
+      each player in playerList
+        .col-sm-4.text-center
+          h3.playerslist-title=player.name
+          p.playerslist-info
+            a(href=`/players/${player.name}`)
+              img.playerslist-img.img-circle(src=`/images/players/${player.photo}.jpg`, alt=`Photo of ${player.name}`)
