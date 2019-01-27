@@ -1,14 +1,12 @@
 {
   "name": "team",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple site of mine favorite team",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server"
   },
   "keywords": [],
-  "author": "",
+  "author": "Elvin Asadov",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
