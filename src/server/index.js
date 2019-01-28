@@ -41,9 +41,9 @@ app.get('/favicon.ico', (req, res, next) => {
 //         return next(err);
 //     }
 // });
-app.use((req, res, next) => {
+app.use(async (req, res, next) => {
     try {
-        const names = playerService.getNames();
+        const names = await playerService.getNames();
         res.locals.playersNames = names;
         return next();
     } catch (err) {
