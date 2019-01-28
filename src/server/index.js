@@ -23,7 +23,7 @@ app.locals.title = configs["sitename"];
 
 const routes = require('./routes');
 //setting public folder to make static resources available from ourside
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
