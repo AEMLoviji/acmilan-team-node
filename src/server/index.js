@@ -23,7 +23,7 @@ app.locals.title = configs["sitename"];
 
 const routes = require('./routes');
 //setting public folder to make static resources available from ourside
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -32,6 +32,15 @@ app.get('/favicon.ico', (req, res, next) => {
 });
 
 //on each request get players name
+// app.use(async (req, res, next) => {
+//     try {
+//         const names = await playerService.getNames();
+//         res.locals.playersNames = names;
+//         return next();
+//     } catch (err) {
+//         return next(err);
+//     }
+// });
 app.use(async (req, res, next) => {
     try {
         const names = await playerService.getNames();
