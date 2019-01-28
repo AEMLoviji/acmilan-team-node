@@ -23,7 +23,7 @@ app.locals.title = configs["sitename"];
 
 const routes = require('./routes');
 //setting public folder to make static resources available from ourside
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -67,12 +67,13 @@ app.use((err, req, res, next) => {
     res.locals.message = err.message;
     const status = err.status || 500;
     res.locals.status = status;
-    //res.locals.error = req.app.get('env') === 'development' ? err : {};
-    res.locals.error = err;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
     res.status(status);
     return res.render('error');
 });
 
-app.listen(process.env.PORT || 3000);
+var listener = app.listen(process.env.PORT || 3000, function () {
+    console.log('Listening on port ' + listener.address().port);
+});
 
 module.export = app;
