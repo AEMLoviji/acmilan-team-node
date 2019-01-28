@@ -33,7 +33,11 @@
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
                     ],
+<<<<<<< HEAD
+                    "properties": {                        
+=======
                     "properties": {
+>>>>>>> 971619b... added windows-webapp-template.json file for AZURE CI/CD pipeline
                     }
                 }
             ],
@@ -46,9 +50,26 @@
                         },
                         {
                             "name": "WEBSITE_NODE_DEFAULT_VERSION",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                             "value": "8.9.4"
                         }
                     ]
+=======
+                            "value": "6.9.1"
+                        }
+                    ],
+                    "phpVersion": "7.1"
+>>>>>>> 971619b... added windows-webapp-template.json file for AZURE CI/CD pipeline
+=======
+                            "value": "10.13.0"
+=======
+                            "value": "8.9.4"
+>>>>>>> 05c4f6b... prosta tak
+                        }
+                    ]
+>>>>>>> 537cbb4... added uncommited files
                 },
                 "name": "[parameters('webAppName')]",
                 "serverFarmId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourcegroups/', resourceGroup().name, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
