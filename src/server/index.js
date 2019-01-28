@@ -32,15 +32,25 @@ app.get('/favicon.ico', (req, res, next) => {
 });
 
 //on each request get players name
-app.use(async (req, res, next) => {
+// app.use(async (req, res, next) => {
+//     try {
+//         const names = await playerService.getNames();
+//         res.locals.playersNames = names;
+//         return next();
+//     } catch (err) {
+//         return next(err);
+//     }
+// });
+app.use((req, res, next) => {
     try {
-        const names = await playerService.getNames();
+        const names = playerService.getNames();
         res.locals.playersNames = names;
         return next();
     } catch (err) {
         return next(err);
     }
 });
+
 
 //registering all routers
 app.use('/', routes({
