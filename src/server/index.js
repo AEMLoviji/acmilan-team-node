@@ -23,7 +23,15 @@ app.locals.title = configs["sitename"];
 
 const routes = require('./routes');
 //setting public folder to make static resources available from ourside
-app.use(express.static('public'));
+<<<<<<< HEAD
+<<<<<<< HEAD
+app.use(express.static(path.join(__dirname, '/public')));
+=======
+app.use(express.static(__dirname + '/public'));
+>>>>>>> 491bd30... public static resources path made dynamic
+=======
+app.use(express.static(path.join(__dirname, '/public')));
+>>>>>>> 056aa09... one more changes
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -32,7 +40,24 @@ app.get('/favicon.ico', (req, res, next) => {
 });
 
 //on each request get players name
+// app.use(async (req, res, next) => {
+//     try {
+//         const names = await playerService.getNames();
+//         res.locals.playersNames = names;
+//         return next();
+//     } catch (err) {
+//         return next(err);
+//     }
+// });
+<<<<<<< HEAD
+<<<<<<< HEAD
 app.use(async (req, res, next) => {
+=======
+app.use((req, res, next) => {
+>>>>>>> d7321a2... async call removed
+=======
+app.use(async (req, res, next) => {
+>>>>>>> d082fb7... changes getNames method to async call
     try {
         const names = await playerService.getNames();
         res.locals.playersNames = names;
@@ -41,6 +66,7 @@ app.use(async (req, res, next) => {
         return next(err);
     }
 });
+
 
 //registering all routers
 app.use('/', routes({
@@ -62,6 +88,18 @@ app.use((err, req, res, next) => {
     return res.render('error');
 });
 
-app.listen(3000);
+<<<<<<< HEAD
+<<<<<<< HEAD
+var listener = app.listen(process.env.PORT || 3000, function () {
+    console.log('Listening on port ' + listener.address().port);
+});
+=======
+app.listen(process.env.PORT || 3000);
+>>>>>>> f690a60... port made dynamic from env
+=======
+var listener = app.listen(process.env.PORT || 3000, function () {
+    console.log('Listening on port ' + listener.address().port);
+});
+>>>>>>> 491bd30... public static resources path made dynamic
 
 module.export = app;

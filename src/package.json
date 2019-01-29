@@ -1,14 +1,12 @@
 {
   "name": "team",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple site of mine favorite team",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server"
   },
   "keywords": [],
-  "author": "",
+  "author": "Elvin Asadov",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -18,5 +16,16 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
+  },
+  "engines": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "node": "8.9.4"
+=======
+    "node": "~10.x"
+>>>>>>> 537cbb4... added uncommited files
+=======
+    "node": "8.9.4"
+>>>>>>> e8d768b... another commit
   }
 }
