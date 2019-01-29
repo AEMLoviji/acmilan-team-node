@@ -10,7 +10,7 @@ module.exports = {
   },
   production: {
     data: {
-      players: path.join(__dirname, '../mock-data/playersjson'),
+      players: path.join(__dirname, '../mock-data/players.json'),
       goals: path.join(__dirname, '../mock-data/goals.json'),
     }
   },
