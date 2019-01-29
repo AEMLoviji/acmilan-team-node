@@ -34,10 +34,14 @@
                         "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
                     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "properties": {                        
 =======
                     "properties": {
 >>>>>>> 971619b... added windows-webapp-template.json file for AZURE CI/CD pipeline
+=======
+                    "properties": {                        
+>>>>>>> 9cf143be7e3548319d7084909651696ca1faeb16
                     }
                 }
             ],
