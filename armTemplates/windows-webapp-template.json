@@ -46,10 +46,9 @@
                         },
                         {
                             "name": "WEBSITE_NODE_DEFAULT_VERSION",
-                            "value": "6.9.1"
+                            "value": "8.9.4"
                         }
-                    ],
-                    "phpVersion": "7.1"
+                    ]
                 },
                 "name": "[parameters('webAppName')]",
                 "serverFarmId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourcegroups/', resourceGroup().name, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
